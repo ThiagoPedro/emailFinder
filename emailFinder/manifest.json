@@ -1,19 +1,19 @@
 {
-  "manifest_version": 3,
-  "version": "0.1.5",
+  "manifest_version": 2,
   "name": "eMail Address Finder",
-  "author": "makingStuffForFun",
+  "version": "0.1.11",
   "description": "Extract and manage email addresses from messages with smart filtering",
+  "author": "Making Stuff",
   "browser_specific_settings": {
     "gecko": {
-      "id": "emailFinder@accessibility.extensions.makingStuffForFun.net",
-      "strict_min_version": "128.0"
+      "id": "emailfinder@makingstuff.co",
+      "strict_min_version": "115.0"
     }
   },
   "permissions": [
-    "compose",
     "messagesRead",
     "menus",
+    "clipboardWrite",
     "storage"
   ],
   "background": {
@@ -21,59 +21,20 @@
       "background.js"
     ]
   },
-  "compose_action": {
-    "type": "menu",
-    "default_title": "eMail Address Finder",
-    "theme_icons": [
-      {
-        "dark": "images/emailFinder_16x.png",
-        "light": "images/emailFinder_16x_white.png",
-        "size": 16
-      },
-      {
-        "dark": "images/emailFinder_32x.png",
-        "light": "images/emailFinder_32x_white.png",
-        "size": 32
-      },
-      {
-        "dark": "images/emailFinder_64x.png",
-        "light": "images/emailFinder_64x_white.png",
-        "size": 64
-      },
-      {
-        "dark": "images/emailFinder_128x.png",
-        "light": "images/emailFinder_128x_white.png",
-        "size": 128
-      }
-    ]
-  },
   "message_display_action": {
-    "type": "menu",
+    "default_icon": "icon.svg",
     "default_title": "eMail Address Finder",
-    "theme_icons": [
-      {
-        "dark": "images/emailFinder_16x.png",
-        "light": "images/emailFinder_16x_white.png",
-        "size": 16
-      },
-      {
-        "dark": "images/emailFinder_32x.png",
-        "light": "images/emailFinder_32x_white.png",
-        "size": 32
-      },
-      {
-        "dark": "images/emailFinder_64x.png",
-        "light": "images/emailFinder_64x_white.png",
-        "size": 64
-      },
-      {
-        "dark": "images/emailFinder_128x.png",
-        "light": "images/emailFinder_128x_white.png",
-        "size": 128
-      }
-    ]
+    "default_popup": "popup.html"
   },
   "options_ui": {
-    "page": "options.html"
+    "page": "options.html",
+    "browser_style": true
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "64": "icon.svg",
+    "128": "icon.svg"
   }
 }
